@@ -223,6 +223,24 @@ ActionRecomPlace에서 장소를 추천할 때 사용되는 logic이 들어있�
 
 <br>
 
+### action_dir/db.py
+
+헤로쿠 데이터 베이스(clearDB)를 사용하기 위해 작성한 코드입니다. 해당 파일 맨 위에 사용자의 db 정보를 작성해주면 됩니다. 실행 하면 contentData의 정보가 모두 데이터 베이스에 업데이트 됩니다.
+
+<br>
+
+### action_dir/Procfile
+
+헤로쿠 상에서 액션 서버를 실행시키기 위한 코드입니다. 그대로 헤로쿠에 업로드하면 자동으로 RASA action이 실행됩니다.
+
+<br>
+
+### action_dir/requirement.txt
+
+헤로쿠 서버 상에서 필요한 라이브러리를 정리해둔 파일입니다. 후에 코드에 추가되는 파이썬 라이브러리가 있다면 여기에 추가적으로 입력하여야 합니다.
+
+<br>
+
 ## Issues(Future Work)
 
 //To Do
