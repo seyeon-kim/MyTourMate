@@ -1,6 +1,9 @@
 import pymysql
 import csv
 
+db = pymysql.connect(host = 'db name', user = 'user name', password = 'pw name', db = 'db name', autocommit = True)
+cur = db.cursor()
+
 def get_query():
 	q = ''
 	while True:
@@ -32,10 +35,7 @@ def make_query(csvfilename):
 	f.close()
 	return entityList[1:]
 
-# mysql://user:password@host/db?reconnect=true
-# mysql://be1a9b3ed30fc3:efd3ec61@us-cdbr-iron-east-05.cleardb.net/heroku_2568178937c7ba4?reconnect=true
-db = pymysql.connect(host = 'us-cdbr-iron-east-05.cleardb.net', user = 'be1a9b3ed30fc3', password = '5aff62241de580e', db = 'heroku_2568178937c7ba4', autocommit = True)
-cur = db.cursor()
+
 
 class Table:
 	def __init__(self, tablename):
