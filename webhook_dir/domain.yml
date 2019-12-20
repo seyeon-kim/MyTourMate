@@ -1,0 +1,185 @@
+%YAML 1.1
+---
+intents:
+- inform_time
+- hello
+- inform_location
+- affirmation
+- recommend_special
+- deny
+- inform_intimacy
+- recommend_play
+- well
+- inform_age
+- inform_activity
+- recommend_anything
+- recommend_anything_all
+- recommend_anything_intimacy
+- recommend_anything_time
+- recommend_rest
+- recommend_rest_all
+- recommend_rest_intimacy
+- recommend_rest_time
+- recommend_sightsee
+- recommend_sightsee_all
+- recommend_sightsee_intimacy
+- recommend_sightsee_time
+- recommend_eat
+- recommend_eat_all
+- recommend_eat_intimacy
+- recommend_eat_time
+- recommend_play_all
+- recommend_play_intimacy
+- recommend_play_time
+- wait
+- reset
+
+entities:
+- activity
+- age
+- group_rate
+- intimacy
+- location
+- needs
+- special
+- time
+
+slots:
+  activity:
+    type: text
+  age:
+    type: text
+  group_rate:
+    type: text
+  intimacy:
+    type: text
+  location:
+    type: text
+  needs:
+    type: text
+  special:
+    type: text
+  time:
+    type: text
+
+actions:
+- utter_ask_location
+- utter_default
+- utter_feedback
+- utter_get_age
+- utter_get_intimacy
+- utter_get_needs
+- utter_get_time
+- utter_greeting
+- utter_inform
+- utter_recom_act
+- utter_reply
+- utter_reset
+- utter_select_eat
+- utter_select_location
+- utter_select_play
+- utter_select_rest
+- utter_select_sightsee
+- utter_sorry
+- utter_thanks
+- action_set_intimacy
+- action_set_age
+- action_set_time
+- action_set_special
+- action_set_activity
+- action_set_location
+- action_recom_place
+- utter_end
+
+templates:
+  utter_ask_location:
+  - text: 어디 근처에 여행중이신가요?
+  utter_default:
+  - text: 잘 못 알아들었어요! 다시 말씀해주실 수 있을까요?
+  utter_feedback:
+  - text: 좋아요 :) 추천이 마음에 드셨나요?
+  utter_get_age:
+  - text: 나이를 알려주시겠어요?
+  utter_get_intimacy:
+  - text: 누구와 함께 여행 중이신가요?
+  utter_get_needs:
+  - text: 이용 중간에 대화를 초기화하고 싶으시면 '리셋'을 입력하세요.
+  utter_inform:
+  - text: (예시) 인스타 감성의 카페 추천해줘. 근처에 쉴 곳을 찾고 있어. 아이와 함께 놀 곳을 추천해줘.
+  utter_get_time:
+  - text: 언제쯤 가실 계획이세요?
+  utter_greeting:
+  - text: 안녕하세요, TourMate입니다. 제주도 여행에 관련해서 물어보세요!
+  utter_had_meal:
+  - text: 식사는 하셨어요?
+  utter_recom_act:
+  - text: Then, how about 'this activity'?
+  utter_recom_place_a:
+  - text: Great. How about 'this place'?
+  utter_reply:
+  - text: 네 :)
+  utter_select_eat:
+  - buttons:
+    - payload: '/inform_activity{"activity": "cafe"}'
+      title: 카페
+    - payload: '/inform_activity{"activity": "restaurant"}'
+      title: 맛집
+    - payload: '/inform_activity{"activity": "market"}'
+      title: 재래시장/야시장
+    text: 마음에 드는 Activity를 선택해주세요.
+  utter_select_location:
+  - buttons:
+    - payload: '/inform_location{"location": "north"}'
+      title: 북부
+    - payload: '/inform_location{"location": "east"}'
+      title: 남동부
+    - payload: '/inform_location{"location": "west"}'
+      title: 남서부
+    text: 북부(제주공항, 애월-협재 해수욕장), 남동부(월정리, 섭지코지, 성산일출봉), 남서부(중문관광단지, 주상절리))
+  utter_select_play:
+  - buttons:
+    - payload: '/inform_activity{"activity": "museum"}'
+      title: 박물관/테마파크
+    - payload: '/inform_activity{"activity": "pub"}'
+      title: 펍
+    - payload: '/inform_activity{"activity": "shopping"}'
+      title: 쇼핑할 곳
+    text: 마음에 드는 Activity를 선택해주세요.
+  utter_select_rest:
+  - buttons:
+    - payload: '/inform_activity{"activity": "cafe"}'
+      title: 카페
+    - payload: '/inform_activity{"activity": "pub"}'
+      title: 펍
+    - payload: '/inform_activity{"activity": "natural"}'
+      title: 자연경관
+    text: 마음에 드는 Activity를 선택해주세요.
+  utter_select_sightsee:
+  - buttons:
+    - payload: '/inform_activity{"activity": "natural"}'
+      title: 자연경관
+    - payload: '/inform_activity{"activity": "museum"}'
+      title: 박물관/테마파크
+    - payload: '/inform_activity{"activity": "historic"}'
+      title: 유적지
+    text: 마음에 드는 Activity를 선택해주세요.
+  utter_end:
+  - text: 대화가 종료되었습니다. 인삿말을 통해 다시 시작할 수 있습니다.
+  utter_sorry:
+  - text: 미안해요.. 다음번에는 조금 더 좋은 정보 제공해드리려고 노력할게요!
+  utter_thanks:
+  - text: 이용해주셔서 감사합니다! 즐거운 제주 여행 되세요.
+  utter_set_location_a:
+  - text: Setting location.
+  utter_set_intimacy_a:
+  - text: Setting intimacy.
+  utter_set_time_a:
+  - text: Setting time.
+  utter_set_age_a:
+  - text: Setting age.
+  utter_set_special_a:
+  - text: Setting special.
+  utter_set_activity_a:
+  - text: Setting activity.
+  utter_reset:
+  - text: 정말 리셋하시겠어요? 한 번 실행하면 되돌릴 수 없어요.
