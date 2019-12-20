@@ -265,5 +265,15 @@ ActionRecomPlace에서 장소를 추천할 때 사용되는 logic이 들어있�
 
 ## Issues(Future Work)
 
-//To Do
+**1. Various Stories & Training Data**
+
+다양한 대화와 매끄러운 대화 흐름을 위해 스토리의 개수와 학습 데이터의 개수를 늘리고, 각 intent간의 학습 데이터 개수를 균일화하면 더 나은 챗봇이 될 것입니다.
+
+**2. Upgrading Recommender Algorithm**
+
+Contents-Based 추천 알고리즘을 적용하거나 각 Column을 기준에 맞게 수치화하여 Rule-Based 추천 알고리즘을 적용하면 추천 속도 상향 및 좀 더 나은 추천이 진행될 것입니다.
+
+**3.Heroku Issues**
+
+현재 헤로쿠를 이용한 배포는 30분마다 서버를 수면 상태로 만든다는 점과 RASA 연동이 불안정한 점이 있습니다. 더 안정된 서버 이용을 권장합니다.
 
