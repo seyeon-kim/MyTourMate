@@ -1,5 +1,6 @@
 # MyTourMate
 본 프로젝트는 KAIST CS408 수업의 과제 용도로 제작되었습니다.
+
 작성자 : 김세연(KAIST, 전산학부) 최승호(KAIST, 전산학부) 
 
 <br>
