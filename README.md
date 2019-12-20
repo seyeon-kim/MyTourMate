@@ -132,7 +132,7 @@ cmd창에서 MyTourMate/webhook_dir로 들어가서 아래와 같은 명령어�
 MyTourMate/webhook_dir/endpoints.yml에서 action_endpoint부분의 url: "[http://localhost:5055/webhook](http://localhost:5055/webhook)"을 주석 처리하고 url에 본인의 헤로쿠 서버의 액션 webhook url을 작성해줍니다. 
 
     action_endpoint:
-     url: "https://tourmate-jeju-actions.herokuapp.com/webhook"
+     url: "헤로쿠 서버 webhook url 작성"
     # url: "http://localhost:5055/webhook"
 
 <br>
