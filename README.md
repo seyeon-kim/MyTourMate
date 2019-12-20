@@ -159,7 +159,7 @@ MyTourMate/webhook_dir/credential.yml에서 주석 처리된 facebook의 주석�
 ### action_dir/action.py
 
 webhook에서 요청이 들어오는 action들을 처리하는 함수들이 포함된 곳입니다. 
-총 7개의 action 함수가 있으며 이를 보조하는 ?개의 보조 함수가 있습니다.
+총 7개의 action 함수가 있으며 추가적으로 몇 가지 보조 함수가 있습니다.
 
 <br>
 
@@ -206,6 +206,7 @@ story 상에서 action_recom_place가 요청될 때 실행되는 함수입니다
 <br>
 
 **recommend_place**
+
 ActionRecomPlace에서 장소를 추천할 때 사용되는 logic이 들어있는 함수입니다. 각 장소에 대해 기준에 맞게 점수를 부여하고 현재 날씨와 오픈 시간을 고려하여 각 content data를 scoring합니다. 
 
 <br>
