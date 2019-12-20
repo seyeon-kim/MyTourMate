@@ -158,20 +158,20 @@ MyTourMate/webhook_dir/credential.yml에서 주석 처리된 facebook의 주석�
 
 다음 파일들은 저희가 작성한 주요 코드입니다.
 
-- **data/nlu.md**
+### data/nlu.md
 
 nlu.md에는 사용자가 말하는 내용에 대한 의도를 의미하는 intent와, 각 intent에 대한 학습 문장이 존재합니다.
 rasa는 학습 문장으로 제공된 문장 샘플들을 통해 학습하고, 사용자의 intent를 예측합니다. entity type에 따라 intent를 세분화하여 설계하였습니다.
 
 <br>
 
-- **data/stories.md**
+### data/stories.md
 
 stories.md는 챗봇과 사용자 사이의 대화가 어떻게 진행될지에 대한 예측을 작성하였습니다. 12개의 story와 8개의 interactive story를 통해 사용자로부터, rasa가 어떠한 action을 취할지 자연스럽게 연결하도록 하였습니다.
 
 <br>
 
-- **domain.py**
+### domain.py
 
 domain.py의 역할은 rasa를 실행하기 위해 필요한 사용자 설정 항목들을 정의해두는 것으로, 크게 actions, entities, intents, slots, templates로 구성됩니다. actions에는 후술할 action_dir/actions.py에서 정의된 action들을 정리해두었습니다. entities에는 저장하고자 하는 entity의 type을 정의합니다. MyTourMate에서는 크게 8개의 entity type(activity, age, group_rate, intimacy, location, needs, special, time)이 설계되었습니다. intents에는 data/nlu.md에서 정의했던 모든 intent의 이름을 정리합니다. slots에는 앞서 정의했던 entity type들에 대해, 각 entity type이 어떠한 속성을 가지는지를 지칭합니다. templates에서는 사용자로부터 받은 intent로부터 반응성 답변이 필요할 때 사용되는 utter message들을 정리해두었습니다.
 
