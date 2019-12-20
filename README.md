@@ -157,42 +157,50 @@ MyTourMate/webhook_dir/credential.yml에서 주석 처리된 facebook의 주석�
 ## Code Guide
 
 ### action_dir/action.py
+
 webhook에서 요청이 들어오는 action들을 처리하는 함수들이 포함된 곳입니다. 
 총 7개의 action 함수가 있으며 이를 보조하는 ?개의 보조 함수가 있습니다.
 
 <br>
 
 **ActionSetAge**
+
 story 상에서 action_set_age가 요청될 때 실행되는 함수입니다. 사용자와의 대화에서 나이에 대한 정보(entity type = age)를 전체 액션 함수에 저장합니다.
 
 <br>
 
 **ActionSetLocation**
+
 story 상에서 action_set_location가 요청될 때 실행되는 함수입니다. 사용자와의 대화에서  현재 위치에 대한 정보(entity type = location)를 전체 액션 함수에 저장합니다. 여기서 database상에서 location이 일치하는 content 데이터를 모두 불러옵니다.
 
 <br>
 
 **ActionSetSpecial**
+
 story 상에서 action_set_special이 요청될 때 실행되는 함수입니다. 사용자와의 대화에서 특별한 요구(entity type = special)가 있는 경우를 분석하여 전체 액션 함수에 저장합니다. 후에 이러한 키워드가 content 데이터의 keywords에 포함이 되었는지를 판단하여 추천 logic에서 점수를 부여합니다.
 
 <br>
 
 **ActionSetActivity**
+
 story 상에서 action_set_activity가 요청될 때 실행되는 함수입니다. 사용자와의 대화에서 원하는 홀동에 대한 정보(entity type = activity)를 전체 액션 함수에 저장합니다.
 
 <br>
 
 **ActionSetIntimacy**
+
 story 상에서 action_set_intimacy가 요청될 때 실행되는 함수입니다. 사용자와의 대화에서  누구와 함께 왔는지에 대한 정보(entity type = intimacy)를 전체 액션 함수에 저장합니다.
 
 <br>
 
 **ActionSetTime**
+
 story 상에서 action_set_time가 요청될 때 실행되는 함수입니다. 사용자와의 대화에서 사용자가 언제쯤 방문할 예정인지에 대한 정보(entity type = time)를 전체 액션 함수에 저장합니다.
 
 <br>
 
 **ActionRecomPlace**
+
 story 상에서 action_recom_place가 요청될 때 실행되는 함수입니다. 사용자와의 대화에서 얻은 사용자의 정보를 바탕으로 장소를 추천해줍니다. 여기에는 몇 가지 보조 함수가 사용됩니다.
 
 <br>
@@ -203,15 +211,18 @@ ActionRecomPlace에서 장소를 추천할 때 사용되는 logic이 들어있�
 <br>
 
 **ranking**
+
 앞서 recommend_place에서 scoring한 데이터들을 바탕으로 상위 5개를 추출하여 반환합니다.
 
 <br>
 
 **resultMessegeUnit**
+
 추출된 5개의 콘텐츠를 페이스북 메신저 메시지 양식에 맞춘 string으로 바꾸어 줍니다. 후에 각 메신저 플랫폼의 정책에 맞춰 해당 함수를 수정할 수 있습니다.
 
 <br>
 
 ## Issues(Future Work)
+
 //To Do
 
